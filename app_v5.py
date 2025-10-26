@@ -850,6 +850,7 @@ elif page == "🧩 Quiz":
             st.session_state.answered = False
             st.session_state.ai_explanation = None
             st.session_state.is_loading_explanation = False
+            st.session_state.quiz_results_saved = False
 
         # --- Hiển thị câu hỏi hoặc kết quả ---
         if st.session_state.quiz_data and st.session_state.q < len(st.session_state.quiz_data):
@@ -937,7 +938,10 @@ elif page == "🧩 Quiz":
             score = st.session_state.score
             total = len(st.session_state.quiz_data)
             st.success(f"Hoàn thành! Bạn đã trả lời đúng {score}/{total} câu.")
-            save_quiz_history(st.session_state.user_id, score, total)
+            if not st.session_state.get("quiz_results_saved", False):
+                save_quiz_history(st.session_state.user_id, score, total)
+                st.session_state.quiz_results_saved = True # Đánh dấu đã lưu
+
             streak = get_learning_streak(st.session_state.user_id)
             proficiency = "Xuất Sắc"
             if total > 0:
@@ -957,7 +961,7 @@ elif page == "🧩 Quiz":
 
             if st.button("Làm lại Quiz"):
                 # Clear quiz-specific session state before rerunning
-                keys_to_delete = ["quiz_data", "q", "score", "answered", "ai_explanation", "is_loading_explanation"]
+                keys_to_delete = ["quiz_data", "q", "score", "answered", "ai_explanation", "is_loading_explanation", "quiz_results_saved"]
                 # Also remove any potentially lingering selection states
                 # Need the previous total to clear selections properly
                 prev_total = total if total > 0 else 10 # Estimate if total was 0
@@ -973,7 +977,7 @@ elif page == "🧩 Quiz":
         else:
              st.info("Bắt đầu làm quiz mới bằng cách tải lại trang hoặc điều hướng.")
              if st.button("Bắt đầu Quiz mới"):
-                 keys_to_delete = ["quiz_data", "q", "score", "answered", "ai_explanation", "is_loading_explanation"]
+                 keys_to_delete = ["quiz_data", "q", "score", "answered", "ai_explanation", "is_loading_explanation", "quiz_results_saved"]
                  for key in keys_to_delete:
                      if key in st.session_state:
                          del st.session_state[key]
