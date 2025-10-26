@@ -1,0 +1,195 @@
+{
+  "dung_lai": {
+    "title": "Dừng lại",
+    "description": "Yêu cầu người lái xe dừng hẳn tại vạch dừng, quan sát an toàn trước khi đi tiếp.",
+    "examples": [
+      "Dừng ở vạch",
+      "Quan sát 2 bên trước khi qua"
+    ],
+    "category": "Biển báo yêu cầu"
+  },
+  "cam_bop_coi": {
+    "title": "Cấm bóp còi",
+    "description": "Cấm sử dụng còi tại khu vực có biển báo này để tránh gây ồn ào.",
+    "examples": [
+      "Khu vực bệnh viện, trường học"
+    ],
+    "category": "Biển báo cấm"
+  },
+  "cam_do_xe": {
+    "title": "Cấm đỗ xe",
+    "description": "Không được phép đỗ xe tại khu vực có biển báo này.",
+    "examples": [
+      "Không đỗ xe trên đường này"
+    ],
+    "category": "Biển báo cấm"
+  },
+  "cam_dung_va_do_xe": {
+    "title": "Cấm dừng và đỗ xe",
+    "description": "Cấm tất cả các loại xe dừng hoặc đỗ tại khu vực biển báo.",
+    "examples": [],
+    "category": "Biển báo cấm"
+  },
+  "cam_nguoi_di_bo": {
+    "title": "Cấm người đi bộ",
+    "description": "Người đi bộ không được phép di chuyển vào khu vực này.",
+    "examples": [],
+    "category": "Biển báo cấm"
+  },
+  "cam_o_to": {
+    "title": "Cấm ô tô",
+    "description": "Ô tô không được phép đi vào đoạn đường có biển báo này.",
+    "examples": [],
+    "category": "Biển báo cấm"
+  },
+  "cam_o_to_re_phai": {
+    "title": "Cấm ô tô rẽ phải",
+    "description": "Ô tô không được phép rẽ phải tại vị trí có biển báo này.",
+    "examples": [],
+    "category": "Biển báo cấm"
+  },
+  "cam_o_to_re_trai": {
+    "title": "Cấm ô tô rẽ trái",
+    "description": "Ô tô không được phép rẽ trái tại vị trí có biển báo này.",
+    "examples": [],
+    "category": "Biển báo cấm"
+  },
+  "cam_quay_dau": {
+    "title": "Cấm quay đầu xe",
+    "description": "Cấm quay đầu xe tại khu vực có biển báo.",
+    "examples": [],
+    "category": "Biển báo cấm"
+  },
+  "cam_re_phai": {
+    "title": "Cấm rẽ phải",
+    "description": "Không được rẽ phải tại ngã tư hoặc điểm có biển báo.",
+    "examples": [],
+    "category": "Biển báo cấm"
+  },
+  "cam_re_trai": {
+    "title": "Cấm rẽ trái",
+    "description": "Không được rẽ trái tại ngã tư hoặc điểm có biển báo.",
+    "examples": [],
+    "category": "Biển báo cấm"
+  },
+  "cam_re_trai_va_quay_dau": {
+    "title": "Cấm rẽ trái và quay đầu xe",
+    "description": "Cấm thực hiện cả hai hành động: rẽ trái và quay đầu.",
+    "examples": [],
+    "category": "Biển báo cấm"
+  },
+  "cam_xe_dap": {
+    "title": "Cấm xe đạp",
+    "description": "Xe đạp không được phép đi vào đoạn đường này.",
+    "examples": [],
+    "category": "Biển báo cấm"
+  },
+  "cam_xe_may": {
+    "title": "Cấm xe mô tô",
+    "description": "Xe máy không được phép đi vào đoạn đường có biển này.",
+    "examples": [],
+    "category": "Biển báo cấm"
+  },
+  "cam_xe_tai": {
+    "title": "Cấm xe tải",
+    "description": "Xe tải không được phép đi vào đoạn đường có biển này.",
+    "examples": [],
+    "category": "Biển báo cấm"
+  },
+  "lan_duong_cua_o_to_va_xe_may": {
+    "title": "Làn đường cho ô tô và xe máy",
+    "description": "Chỉ ô tô và xe máy được phép lưu thông trên làn đường này.",
+    "examples": [],
+    "category": "Biển báo chỉ dẫn"
+  },
+  "lan_duong_cua_o_to": {
+    "title": "Làn đường cho ô tô",
+    "description": "Chỉ ô tô được phép đi trên làn đường này.",
+    "examples": [],
+    "category": "Biển báo chỉ dẫn"
+  },
+  "giao_nhau_voi_duong_khong_uu_tien_o_ben_phai": {
+    "title": "Giao nhau với đường không ưu tiên bên phải",
+    "description": "Cảnh báo phía trước có giao cắt với đường nhỏ hơn ở bên phải.",
+    "examples": [],
+    "category": "Biển cảnh báo"
+  },
+  "chi_huong_di_ben_phai": {
+    "title": "Chỉ hướng đi bên phải",
+    "description": "Các phương tiện phải đi về phía bên phải.",
+    "examples": [],
+    "category": "Biển báo chỉ dẫn"
+  },
+  "chi_dan_huong_di_thang": {
+    "title": "Hướng đi thẳng",
+    "description": "Phương tiện chỉ được phép đi thẳng tại khu vực này.",
+    "examples": [],
+    "category": "Biển báo chỉ dẫn"
+  },
+  "chi_dan_co_vong_xuyen": {
+    "title": "Chỉ dẫn có vòng xuyến",
+    "description": "Báo hiệu phía trước có vòng xuyến, phải đi theo hướng mũi tên.",
+    "examples": [],
+    "category": "Biển báo chỉ dẫn"
+  },
+  "canh_bao_nguoi_di_bo_cat_ngang": {
+    "title": "Có người đi bộ cắt ngang",
+    "description": "Cảnh báo có đường dành cho người đi bộ phía trước.",
+    "examples": [],
+    "category": "Biển cảnh báo"
+  },
+  "canh_bao_duong_thu_hep_ben_phai": {
+    "title": "Đường bị thu hẹp bên phải",
+    "description": "Phía trước đường bị thu hẹp về bên phải.",
+    "examples": [],
+    "category": "Biển cảnh báo"
+  },
+  "canh_bao_duong_khong_bang_phang": {
+    "title": "Đường gồ ghề",
+    "description": "Cảnh báo phía trước có đoạn đường gồ ghề, không bằng phẳng.",
+    "examples": [],
+    "category": "Biển cảnh báo"
+  },
+  "canh_bao_di_cham": {
+    "title": "Đi chậm",
+    "description": "Yêu cầu người điều khiển giảm tốc độ, đi chậm.",
+    "examples": [],
+    "category": "Biển báo yêu cầu"
+  },
+  "canh_bao_cong_truong": {
+    "title": "Công trường thi công",
+    "description": "Báo hiệu đoạn đường đang thi công, cần chú ý an toàn.",
+    "examples": [],
+    "category": "Biển cảnh báo"
+  },
+  "canh_bao_tre_em_qua_duong": {
+    "title": "Trẻ em qua đường",
+    "description": "Cảnh báo khu vực trường học hoặc nơi trẻ em hay qua lại.",
+    "examples": [],
+    "category": "Biển cảnh báo"
+  },
+  "cam_di_nguoc_chieu": {
+    "title": "Cấm đi ngược chiều",
+    "description": "Không được phép đi ngược chiều trên đoạn đường này.",
+    "examples": [],
+    "category": "Biển báo cấm"
+  },
+  "toc_do_toi_da_60km-h": {
+    "title": "Giới hạn tốc độ 60 km/h",
+    "description": "Tốc độ tối đa cho phép là 60 km/h trên đoạn đường này.",
+    "examples": [],
+    "category": "Biển báo giới hạn"
+  },
+  "toc_do_toi_da_50km-h": {
+    "title": "Giới hạn tốc độ 50 km/h",
+    "description": "Tốc độ tối đa cho phép là 50 km/h trên đoạn đường này.",
+    "examples": [],
+    "category": "Biển báo giới hạn"
+  },
+  "toc_do_toi_da_40km-h": {
+    "title": "Giới hạn tốc độ 40 km/h",
+    "description": "Tốc độ tối đa cho phép là 40 km/h trên đoạn đường này.",
+    "examples": [],
+    "category": "Biển báo giới hạn"
+  }
+}

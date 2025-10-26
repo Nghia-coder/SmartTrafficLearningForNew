@@ -1,0 +1,7 @@
+streamlit>=1.24
+ultralytics>=8.0.0
+opencv-python
+pillow
+numpy
+pandas
+sentence-transformers faiss-cpu
