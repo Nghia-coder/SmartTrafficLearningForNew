@@ -37,6 +37,9 @@ st.set_page_config(page_title="Học Biển Báo Giao Thông", layout="wide")
 # =====================
 # CSS GIAO DIỆN
 # =====================
+# =====================
+# CSS GIAO DIỆN
+# =====================
 st.markdown("""
     <style>
     * { box-sizing: border-box; }
@@ -48,13 +51,17 @@ st.markdown("""
     }
     .header img { height: 45px; }
     .header h1 { font-size: 1.6rem; margin: 0; font-weight: 600; }
+    
+    /* (SỬA LỚN) ÁP DỤNG MÀU XANH DƯƠNG CHO TẤT CẢ CÁC NÚT MẶC ĐỊNH (PRIMARY) */
     .stButton>button {
-        background: linear-gradient(135deg, #ffb703, #fb8500);
+        /* Thay thế gradient cam/vàng bằng gradient xanh dương */
+        background: linear-gradient(135deg, #457b9d, #1d3557); 
         color: white; border-radius: 8px; padding: 8px 20px;
         font-weight: 600; border: none; transition: all 0.2s ease;
     }
     .stButton>button:hover {
-        background: linear-gradient(135deg, #fb8500, #ffb703);
+        /* Đảo lại gradient xanh dương khi hover */
+        background: linear-gradient(135deg, #1d3557, #457b9d); 
         transform: translateY(-2px);
         box-shadow: 0 2px 8px rgba(0,0,0,0.2);
     }
@@ -75,7 +82,7 @@ st.markdown("""
     .sign-card {
         background-color: white; padding: 15px; border-radius: 12px;
         box-shadow: 0 3px 8px rgba(0,0,0,0.1); margin-bottom: 15px;
-        color: #333; /* (SỬA) Đảm bảo màu chữ tối trên nền trắng */
+        color: #333;
     }
     .footer {
         text-align: center; color: #6c757d; padding: 10px; font-size: 0.9rem;
@@ -93,8 +100,8 @@ st.markdown("""
         text-align: left;
         padding: 12px 15px;
         transition: all 0.2s ease;
-        width: 100%; /* Đảm bảo nút chiếm đủ chiều rộng */
-        margin-bottom: 5px; /* Khoảng cách giữa các nút */
+        width: 100%;
+        margin-bottom: 5px;
     }
     .st-emotion-cache-1jicfl2 .stButton>button:hover {
         background: #e6e8eb;
@@ -111,21 +118,29 @@ st.markdown("""
     }
 
 
-    /* (SỬA) Căn giữa nút xóa */
-     /* Container chứa nút tên và nút xóa */
-    .st-emotion-cache-1jicfl2 div[data-testid="stHorizontalBlock"] {
-        align-items: center; /* Căn giữa các item theo chiều dọc */
-        margin-bottom: 5px; /* Đồng bộ khoảng cách */
+    /* (CẢI TIẾN) CĂN CHỈNH CONTAINER CHỨA NÚT CHAT SESSION VÀ NÚT XÓA */
+    /* Target tất cả các HorizontalBlock (chứa nút session và nút xóa) */
+    .st-emotion-cache-1jicfl2 [data-testid="stHorizontalBlock"] {
+        align-items: center !important; /* Dùng !important để đảm bảo override và căn giữa dọc */
+        margin-bottom: 5px;
     }
+
+    /* (CẢI TIẾN) Nút xóa: Thiết lập kích thước cố định và căn giữa nội dung */
     /* Nút xóa */
     .st-emotion-cache-1jicfl2 .stButton>button[key*="delete_"] {
         background: #fdfdfd;
         color: #888;
         border: 1px solid #e0e0e0;
-        padding: 8px 10px; /* Điều chỉnh padding nếu cần */
-        height: auto; /* Cho phép chiều cao tự động */
-        line-height: normal; /* Đảm bảo text/icon căn giữa */
-        flex-shrink: 0; /* Ngăn nút bị co lại */
+        /* (SỬA) Kích thước cố định để nút thành hình vuông */
+        width: 35px; 
+        height: 35px;
+        line-height: 0; /* Loại bỏ line-height để căn giữa icon */
+        padding: 0; /* Bỏ padding */
+        display: flex; /* Dùng flex để căn icon */
+        align-items: center; /* Căn giữa dọc */
+        justify-content: center; /* Căn giữa ngang */
+        flex-shrink: 0; 
+        border-radius: 8px; /* Bo tròn góc */
     }
     .st-emotion-cache-1jicfl2 .stButton>button[key*="delete_"]:hover {
         background: #fee;
@@ -187,9 +202,54 @@ st.markdown("""
     .chat-placeholder h3 { color: #888; font-weight: 400; text-align: center; padding: 20px; }
 
     /* --- HẾT CSS CHO TRANG CHAT --- */
+            
+    /* Áp dụng cho TẤT CẢ các nút trong sidebar */
+    [data-testid="stSidebar"] .stButton>button {
+        border-radius: 8px;
+        transition: all 0.3s ease;
+        margin-bottom: 5px; 
+        border: 1px solid transparent; 
+        text-align: left; 
+        padding-left: 15px;
+    }
+
+    /* Nút không được chọn (secondary) */
+    [data-testid="stSidebar"] .stButton>button[data-kind="secondary"] {
+        background-color: #f0f8ff; 
+        color: #1d3557; 
+        border-color: #a8dadc; 
+    }
+
+    /* Hover nút không được chọn */
+    [data-testid="stSidebar"] .stButton>button[data-kind="secondary"]:hover {
+        background-color: #e0f7fa; 
+        color: #1d3557;
+        border-color: #457b9d; 
+        transform: translateY(-2px);
+        box-shadow: 0 4px 10px rgba(69, 123, 157, 0.2); 
+    }
+
+    /* Nút được chọn (primary) */
+    [data-testid="stSidebar"] .stButton>button[data-kind="primary"] {
+        background: linear-gradient(90deg, #457b9d, #1d3557);
+        color: white;
+        border-color: #1d3557;
+        box-shadow: 0 4px 12px rgba(29, 53, 87, 0.3);
+    }
+    
+    /* Hover nút được chọn (chỉ sáng lên một chút) */
+    [data-testid="stSidebar"] .stButton>button[data-kind="primary"]:hover {
+         filter: brightness(110%);
+    }
+
+    /* Bỏ viền focus mặc định (đã có style riêng) */
+    [data-testid="stSidebar"] .stButton>button:focus {
+        outline: none;
+        box-shadow: 0 0 0 2px rgba(69, 123, 157, 0.5); 
+    }
+    /* --- HẾT CSS NÚT SIDEBAR --- */
     </style>
 """, unsafe_allow_html=True)
-
 # =====================
 # HEADER
 # =====================
@@ -480,6 +540,12 @@ def get_ai_explanation(question, user_answer, correct_answer):
 # SESSION
 # =====================
 # Initialize session state variables if they don't exist
+# (Mới)
+# =====================
+# SESSION (ĐÃ SỬA)
+# =====================
+# Initialize session state variables if they don't exist
+# (Mới)
 default_states = {
     "user_id": None,
     "username": None,
@@ -490,7 +556,10 @@ default_states = {
     "score": 0,
     "answered": False,
     "ai_explanation": None,
-    "is_loading_explanation": False
+    "is_loading_explanation": False,
+    "page": "🏷️ Nhận diện",
+    # (MỚI) Thêm state cho tab đăng nhập/đăng ký
+    "login_tab": "🔐 Đăng nhập" 
 }
 for key, default_value in default_states.items():
     if key not in st.session_state:
@@ -498,17 +567,48 @@ for key, default_value in default_states.items():
 
 
 # =====================
-# LOGIN / REGISTER
+# LOGIN / REGISTER (ĐÃ SỬA LẠI ĐỂ DÙNG BUTTON VÀ STYLE)
 # =====================
 if not st.session_state.user_id:
-    tab = st.radio("Chọn hành động", ["🔐 Đăng nhập", "📝 Đăng ký"], horizontal=True)
     st.markdown("<h2 style='text-align:center;margin-top:20px;'>Học Biển Báo Giao Thông 🚗</h2>", unsafe_allow_html=True)
+    st.markdown("<p style='text-align:center;margin-bottom:20px;'>Chọn hành động:</p>", unsafe_allow_html=True)
 
-    if tab == "🔐 Đăng nhập":
+    # Thay st.radio bằng st.button trong columns
+    tab_col1, tab_col2 = st.columns(2)
+    
+    # --- Nút Đăng nhập ---
+    with tab_col1:
+        is_login_tab = (st.session_state.login_tab == "🔐 Đăng nhập")
+        # Đặt type thành "primary" để có màu xanh dương nếu được chọn
+        btn_type = "primary" if is_login_tab else "secondary" 
+        
+        # Thêm key để nút có thể sử dụng CSS đã tùy chỉnh (bắt chước nút sidebar)
+        if st.button("🔐 Đăng nhập", use_container_width=True, type=btn_type, key="login_tab_btn"):
+            st.session_state.login_tab = "🔐 Đăng nhập"
+            st.rerun()
+
+    # --- Nút Đăng ký ---
+    with tab_col2:
+        is_register_tab = (st.session_state.login_tab == "📝 Đăng ký")
+        # Đặt type thành "primary" để có màu xanh dương nếu được chọn
+        btn_type = "primary" if is_register_tab else "secondary"
+        
+        # Thêm key để nút có thể sử dụng CSS đã tùy chỉnh
+        if st.button("📝 Đăng ký", use_container_width=True, type=btn_type, key="register_tab_btn"):
+            st.session_state.login_tab = "📝 Đăng ký"
+            st.rerun()
+
+    st.markdown("---") # Đường kẻ phân cách
+
+    # Hiển thị form dựa trên trạng thái đã chọn
+    if st.session_state.login_tab == "🔐 Đăng nhập":
+        st.subheader("Đăng nhập")
         with st.form(key="login_form"):
             u = st.text_input("Tên đăng nhập")
             p = st.text_input("Mật khẩu", type="password")
-            login_button = st.form_submit_button("Đăng nhập", use_container_width=True)
+            # Nút submit này sẽ dùng CSS gradient cam/vàng mặc định của stButton, 
+            # không bị ảnh hưởng bởi CSS sidebar.
+            login_button = st.form_submit_button("Đăng nhập", use_container_width=True) 
 
         if login_button:
             uid = login_user(u, p)
@@ -521,11 +621,13 @@ if not st.session_state.user_id:
                 st.error("Sai tên đăng nhập hoặc mật khẩu.")
 
     else: # Tab Đăng ký
+        st.subheader("Đăng ký tài khoản mới")
         with st.form(key="register_form"):
             u = st.text_input("Tên đăng nhập mới")
             p = st.text_input("Mật khẩu", type="password")
             cp = st.text_input("Xác nhận mật khẩu", type="password")
-            register_button = st.form_submit_button("Đăng ký", use_container_width=True)
+            # Nút submit này sẽ dùng CSS gradient cam/vàng mặc định của stButton.
+            register_button = st.form_submit_button("Đăng ký", use_container_width=True) 
 
         if register_button:
             if p != cp:
@@ -548,8 +650,27 @@ if st.sidebar.button("Đăng xuất"):
         st.session_state[key] = default_states[key]
     st.rerun()
 
+# (Mới)
 st.sidebar.markdown("---")
-page = st.sidebar.radio("Chọn trang", ["🏷️ Nhận diện", "📘 Tài liệu", "💬 Chat với AI Giao Thông", "🧩 Quiz", "📜 Lịch sử Quiz"])
+st.sidebar.markdown("##### Chọn trang") # Thêm tiêu đề cho nhóm nút
+
+# Danh sách các trang
+pages_list = ["🏷️ Nhận diện", "📘 Tài liệu", "💬 Chat với AI Giao Thông", "🧩 Quiz", "📜 Lịch sử Quiz"]
+
+# Đọc trang hiện tại từ session state
+current_page = st.session_state.page
+
+# Tạo các nút
+for p in pages_list:
+    # Đặt loại nút: "primary" (nổi bật) nếu là trang hiện tại, "secondary" (thường) nếu không
+    btn_type = "primary" if (p == current_page) else "secondary"
+    
+    if st.sidebar.button(p, use_container_width=True, type=btn_type):
+        st.session_state.page = p
+        st.rerun() # Chạy lại script ngay lập tức để cập nhật giao diện
+
+# Gán biến 'page' để phần còn lại của script hoạt động
+page = st.session_state.page
 
 # Load model and signs info (handle potential errors)
 try:
@@ -716,7 +837,6 @@ elif page == "💬 Chat với AI Giao Thông":
                 with s_col2:
                     if st.button("🗑️", key=f"delete_{session_id}", use_container_width=True):
                         st.session_state.session_to_delete = session_id
-                        # If deleting the currently selected session, deselect it visually
                         if session_id == st.session_state.current_session_id:
                              st.session_state.current_session_id = None
                         st.rerun()
