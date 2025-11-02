@@ -20,6 +20,7 @@ Cơ sở dữ liệu: SQLite
 Thư viện khác: Numpy, Pandas
 
 **Chuẩn bị và Cài đặt**
+
 **1. Tải mã nguồn (hoặc Clone Repository)**
 git clone [https://github.com/ten-repo-cua-ban/ten-du-an.git](https://github.com/ten-repo-cua-ban/ten-du-an.git)
 cd ten-du-an
