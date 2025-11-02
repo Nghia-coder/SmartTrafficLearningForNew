@@ -45,6 +45,7 @@ python -m venv venv
 .\venv\Scripts\activate
 
 **4. Cài đặt thư viện**
+
 Dự án yêu cầu các thư viện được liệt kê trong requirements.txt.
 Nội dung requirements.txt:
 streamlit>=1.24
