@@ -1,4 +1,4 @@
-**Ứng Dụng Trợ Lý Học Biển Báo Giao Thông Thông Minh Dựa Trên AI**
+***Ứng Dụng Trợ Lý Học Biển Báo Giao Thông Thông Minh Dựa Trên AI***
 
 Đây là dự án xây dựng một ứng dụng web hỗ trợ học tập và nhận diện biển báo giao thông (BBGT) tại Việt Nam. Ứng dụng được phát triển bằng Streamlit, kết hợp mô hình nhận diện đối tượng (YOLOv8) để phát hiện biển báo từ ảnh và mô hình ngôn ngữ lớn (Google Gemini) để cung cấp giải thích chi tiết, trả lời câu hỏi và hỗ trợ ôn tập.
 
@@ -60,6 +60,7 @@ opencv-python-headless
 pip install -r requirements.txt
 
 **5. Cấu hình API Key**
+
 Ứng dụng này cần một API Key từ Google Gemini (Google AI Studio) để hoạt động.
 Mở tệp app_v5.5.py.
 Tìm đến dòng sau:
