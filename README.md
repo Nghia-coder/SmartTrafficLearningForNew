@@ -70,7 +70,7 @@ streamlit run app_v5.5.py
 Streamlit sẽ tự động mở một tab trên trình duyệt của bạn (thường là http://localhost:8501).
 
 **Cấu trúc thư mục**
-
+<img width="1806" height="752" alt="image" src="https://github.com/user-attachments/assets/05b77e3e-f66e-4236-b6a1-c403f514ec74" />
 
 
 
