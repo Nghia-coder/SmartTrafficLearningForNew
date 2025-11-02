@@ -71,16 +71,6 @@ Streamlit sẽ tự động mở một tab trên trình duyệt của bạn (th�
 
 **Cấu trúc thư mục**
 
-├── 📄 app_v5.5.py         # File Streamlit chính để chạy ứng dụng
-├── 📦 last85.pt           # File mô hình YOLOv8 đã huấn luyện
-├── 📄 signs_info.json     # Thông tin chi tiết 56 loại biển báo
-├── 📁 signs/              # Thư mục chứa ảnh PNG của 56 biển báo
-│   ├── 📄 cam_bop_coi.png
-│   ├── 📄 dung_lai.png
-│   └── 📄 ... (54 ảnh khác)
-├── 📄 requirements.txt    # Danh sách các thư viện Python cần thiết
-├── 📄 README.md           # File hướng dẫn này
-└── 📦 users.db            # CSDL (sẽ tự động tạo khi chạy lần đầu)
-└── 📦 gemini_cache.db     # Cache giải thích (sẽ tự động tạo khi chạy)
+
 
 
