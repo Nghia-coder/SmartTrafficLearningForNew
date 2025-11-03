@@ -26,6 +26,7 @@ Thư viện khác: Numpy, Pandas
 git clone (https://github.com/Nghia-coder/SmartTrafficLearningForNew.git)
 
 **2. Chuẩn bị các tệp tin cần thiết**
+
 Trước khi chạy, hãy đảm bảo bạn có các tệp dữ liệu quan trọng sau trong thư mục gốc của dự án:
 Mô hình YOLOv8:
 last85.pt: File trọng số của mô hình YOLOv8n đã được huấn luyện.
@@ -35,6 +36,7 @@ signs_info.json: File JSON chứa thông tin (tên, mô tả, loại) của 56 b
 Một thư mục có tên signs chứa hình ảnh .png của 56 loại biển báo. Tên tệp phải khớp với key trong signs_info.json (ví dụ: dung_lai.png, cam_bop_coi.png...).
 
 **3. Cài đặt Môi trường (Khuyến nghị)**
+
 Tạo một môi trường ảo để tránh xung đột thư viện:
 # Dành cho macOS/Linux
 python3 -m venv venv
