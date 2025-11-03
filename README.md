@@ -22,8 +22,7 @@ Thư viện khác: Numpy, Pandas
 **Chuẩn bị và Cài đặt**
 
 **1. Tải mã nguồn (hoặc Clone Repository)**
-git clone [https://github.com/ten-repo-cua-ban/ten-du-an.git](https://github.com/ten-repo-cua-ban/ten-du-an.git)
-cd ten-du-an
+git clone (https://github.com/Nghia-coder/SmartTrafficLearningForNew.git)
 
 **2. Chuẩn bị các tệp tin cần thiết**
 Trước khi chạy, hãy đảm bảo bạn có các tệp dữ liệu quan trọng sau trong thư mục gốc của dự án:
