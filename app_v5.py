@@ -22,7 +22,7 @@ os.environ["GOOGLE_API_USE_CLIENT_CERTIFICATE"] = "false"
 # CONFIG
 # =====================
 # !!! THAY THẾ API KEY CỦA BẠN VÀO ĐÂY !!!
-GEMINI_API_KEY = "AIzaSyCq6nzJrXliZZyzVDvPmm6juTOEttRjJdQ" # Replace with your actual API key
+GEMINI_API_KEY = "" # Replace with your actual API key
 
 MODEL_PATH = "last85.pt"
 SIGNS_INFO_PATH = "signs_info.json"
@@ -1131,3 +1131,4 @@ elif page == "📜 Lịch sử Quiz":
 # FOOTER
 # =====================
 st.markdown("<div class='footer'>Ứng dụng học biển báo giao thông – YOLOv8 + AI Giao Thông 🌤</div>", unsafe_allow_html=True)
+
